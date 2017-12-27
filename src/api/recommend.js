@@ -4,6 +4,8 @@
 import jsonp from './jsonp'
 import {URL, PARAM, OPTION} from './config'
 
+//请求qq音乐接口的参数
+
 export function getCarousel() {
 	const data = Object.assign({}, PARAM, {
 		g_tk: 701075962,
@@ -31,4 +33,15 @@ export function getNewAlbum() {
 		prefix: 'callback',
 	};
 	return jsonp(URL.newalbum, data, option);
+}
+
+export function getAlbumInfo(albumMid) {
+	const data = Object.assign({}, PARAM, {
+		albummid: albumMid,
+		g_tk: 1278911659,
+		hostUin: 0,
+		platform: 'yqq',
+		needNewCode: 0,
+	})
+	return jsonp(URL.albumInfo, data, OPTION);
 }

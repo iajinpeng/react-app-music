@@ -46,10 +46,16 @@ class Scroll extends React.Component{
 	}
 }
 
+Scroll.defaultProps = {
+	click: true,
+	refresh: false,
+	onScroll: null
+};
+
 Scroll.propTypes = {
 	click: PropTypes.bool,
 	refresh: PropTypes.bool,
 	onScroll: PropTypes.func,
-}
+};
 
 export default Scroll
