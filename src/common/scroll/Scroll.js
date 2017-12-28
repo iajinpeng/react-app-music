@@ -21,6 +21,7 @@ class Scroll extends React.Component{
 				probeType: 3,
 				click: this.props.click,
 			});
+			//派发滚动事件
 			if(this.props.onScroll){
 				this.bScroll.on('scroll', (scroll) => {
 					this.props.onScroll(scroll);
